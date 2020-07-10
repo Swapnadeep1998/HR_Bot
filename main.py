@@ -1,7 +1,7 @@
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
-
+#nltk.download('punkt')
 #Libraries needed for Tensorflow Processing
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
@@ -10,8 +10,8 @@ import tflearn
 import random
 import json
 import pickle
-import sqlite3
-import datetime as dt
+#import sqlite3
+#import datetime as dt
 import warnings
 warnings.filterwarnings("ignore")
 from tensorflow.python.util import deprecation
@@ -99,48 +99,50 @@ def response(sentence, userID='123', show_details=False):
                       
                 if i['tag'] == results[0][0]:
                     # a random response from the intent                    
-                    return print('\nHR_bot: ',random.choice(i['responses']))               
+                    return random.choice(i['responses'])               
     
             results.pop(0)
     else:
-      return print('HR_bot: Sorry, Your input is not understanble or acceptable for us')
+      return 'HR_bot: Sorry, Your input is not understanble or acceptable for us'
 
 
 
-name = str(input("Enter Your Full Name: "))
-fn,ln = name.split()
-mail = str(input("Your Email Id: "))
+
+
+#name = str(input("Enter Your Full Name: "))
+#fn,ln = name.split()
+#mail = str(input("Your Email Id: "))
 
 #Initializing the points variables
 
-date = str(dt.datetime.now())
-date,_ = date.split(".")
-date,time = date.split()
+#date = str(dt.datetime.now())
+#date,_ = date.split(".")
+#date,time = date.split()
 
-jr = 0
-skill_pts = 0
-exp_pts = 0
-project_pts = 0
-total_pts = 0
+#jr = 0
+#skill_pts = 0
+#exp_pts = 0
+#project_pts = 0
+#total_pts = 0
 
 #Storing Datas into the Database
-def insert_into_db(name,mail,jr,exp_pts,skill_pts, project_pts,total_pts):
-    db = sqlite3.connect('HR_bot.db')
-    cr = db.cursor()
+#def insert_into_db(name,mail,jr,exp_pts,skill_pts, project_pts,total_pts):
+#    db = sqlite3.connect('HR_bot.db')
+#    cr = db.cursor()
     
-    cr.execute('''INSERT INTO applicants_data(Date,Time,Name, Mail_id, Prefd_Jobrole, Exp_pts, Skills_pts,Projects_pts,Total_pts)
-                   VALUES(?,?,?,?,?,?,?,?,?);''',(date,time,name,mail,jr,exp_pts,skill_pts, project_pts,total_pts))
-    db.commit()
-    db.close()
-    return
+ #   cr.execute('''INSERT INTO applicants_data(Date,Time,Name, Mail_id, Prefd_Jobrole, Exp_pts, Skills_pts,Projects_pts,Total_pts)
+ #                  VALUES(?,?,?,?,?,?,?,?,?);''',(date,time,name,mail,jr,exp_pts,skill_pts, project_pts,total_pts))
+#    db.commit()
+#    db.close()
+ #   return
 
     
-print('\nHR_bot: Hi, I am HR-bot, Nice to meet you', fn)
+#print('\nHR_bot: Hi, I am HR-bot, Nice to meet you', fn)
 
-while True:
+#while True:
     
-    s = str(input('you: '))
-    
+#    s = str(input('you: '))
+"""   
     if classify(s)[0][0] == "Exp_Fresher_level":
         exp_pts = 2
     elif classify(s)[0][0] == "Exp_Intermediate_level":
@@ -170,4 +172,5 @@ while True:
         break
         
     response(s)
-    
+
+"""   
