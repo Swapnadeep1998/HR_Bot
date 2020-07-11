@@ -1,23 +1,15 @@
 from flask import Flask, request, render_template, jsonify, session
 import numpy as np
 from main import *
-from create_db import *
+from table import *
 import os
-
+from datetime import date
 
 application = app = Flask(__name__)
 app.secret_key = os.urandom(24)
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db.init_app(application)
-
-@app.route("/")
-def index():
-    return render_template("index_test.html")
-
-@app.route("/chat", methods = ["POST"])
-def chat():     
-    message = request.form.get("message")
-    reply = response(str(message))
-    return jsonify({"bot":reply,"user":message})
 
 def points(s):    
     if classify(s)[0][0] == "Exp_Fresher_level":
@@ -41,12 +33,51 @@ def points(s):
     elif classify(s)[0][0] == "Skill_Pro":
         session["skill_pts"] = 10
     elif classify(s)[0][0] == "Acceptable_role":
-        elements["jobrole"] = s
-        
-    elif s == ('exit' or 'Exit'):
-        return elements
-    
+        session["jobrole"] = s        
+    elif s == ('exit' or 'Exit'):        
+        return None
+
+def store_into_table(session):
+    date_now = date.today()
+    name = session["name"]
+    email = session["email"]
+    jobrole = session["jobrole"]
+    experience_pts = session["exp_pts"]
+    skill_pts = session["skill_pts"]
+    project_pts = session["project_pts"]
+    total_pts = experience_pts+skill_pts+project_pts
+    data = Candidates(date = date_now,name = name, email = email, jobrole = jobrole,experience_pts=experience_pts,
+    skill_pts=skill_pts,project_pts=project_pts,total_pts=total_pts)
+    db.session.add(data)
+    db.session.commit()
+    return None
+
+
+
+@app.route("/")
+def index():
+    return render_template("user.html")
+
+@app.route("/user", methods=["POST"]) 
+def user():
+    session["name"] = request.form.get("name")
+    session["email"] = request.form.get("email")
+    return render_template("index_test.html") 
+
+@app.route("/chat", methods = ["POST"])
+def chat():     
+    message = request.form.get("message")
+    points(message)
+    if message == "exit":
+        store_into_table(session)
+        reply = "bye"
+        return jsonify({"bot":reply,"user":message})
+    reply = response(str(message))
+    return jsonify({"bot":reply,"user":message})
+
+
 
 if __name__=="__main__":
-    app.run(debug = True)
+    with application.app_context():
+        app.run(debug=True)
     
