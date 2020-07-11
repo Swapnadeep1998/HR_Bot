@@ -107,70 +107,8 @@ def response(sentence, userID='123', show_details=False):
 
 
 
-
-
-#name = str(input("Enter Your Full Name: "))
-#fn,ln = name.split()
-#mail = str(input("Your Email Id: "))
-
-#Initializing the points variables
-
-#date = str(dt.datetime.now())
-#date,_ = date.split(".")
-#date,time = date.split()
-
-#jr = 0
-#skill_pts = 0
-#exp_pts = 0
-#project_pts = 0
-#total_pts = 0
-
-#Storing Datas into the Database
-#def insert_into_db(name,mail,jr,exp_pts,skill_pts, project_pts,total_pts):
-#    db = sqlite3.connect('HR_bot.db')
-#    cr = db.cursor()
-    
- #   cr.execute('''INSERT INTO applicants_data(Date,Time,Name, Mail_id, Prefd_Jobrole, Exp_pts, Skills_pts,Projects_pts,Total_pts)
- #                  VALUES(?,?,?,?,?,?,?,?,?);''',(date,time,name,mail,jr,exp_pts,skill_pts, project_pts,total_pts))
-#    db.commit()
-#    db.close()
- #   return
-
-    
-#print('\nHR_bot: Hi, I am HR-bot, Nice to meet you', fn)
-
-#while True:
-    
-#    s = str(input('you: '))
-"""   
-    if classify(s)[0][0] == "Exp_Fresher_level":
-        exp_pts = 2
-    elif classify(s)[0][0] == "Exp_Intermediate_level":
-        exp_pts = 5
-    elif classify(s)[0][0] == "Exp_Pro_level":
-        exp_pts = 8
-    elif classify(s)[0][0] == "Basic_proj":
-        project_pts = 2
-    elif classify(s)[0][0] == "Intermediate_proj":
-        project_pts = 4
-    elif classify(s)[0][0] == "Exp_proj_lvl1":
-        project_pts = 6
-    elif classify(s)[0][0] == "Exp_proj_lvl2":
-        project_pts = 8
-    elif classify(s)[0][0] == "Skill_Basic":
-        skill_pts = 3
-    elif classify(s)[0][0] == "Skill_Int":
-        skill_pts = 6
-    elif classify(s)[0][0] == "Skill_Pro":
-        skill_pts = 10
-    elif classify(s)[0][0] == "Acceptable_role":
-        jr = s
         
-    elif s == ('exit' or 'Exit'):
-        total_pts = exp_pts + skill_pts + project_pts
-        insert_into_db(name,mail,jr,exp_pts,skill_pts, project_pts,total_pts)
-        break
         
-    response(s)
+   
 
-"""   
+  
