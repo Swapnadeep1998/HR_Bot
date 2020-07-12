@@ -10,8 +10,6 @@ import tflearn
 import random
 import json
 import pickle
-#import sqlite3
-#import datetime as dt
 import warnings
 warnings.filterwarnings("ignore")
 from tensorflow.python.util import deprecation
