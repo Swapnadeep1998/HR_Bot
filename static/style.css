@@ -5,7 +5,7 @@
     border-radius: 15px;
     position: absolute;
     left: 500px;    
-    padding: 2px 2px 5px 3px;  
+    padding: 2px 2px 5px 1px;  
     overflow: hidden; 
 }
 
@@ -17,7 +17,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     margin-bottom: 15px;
-    padding: 2px;  
+    padding: 5px;  
     display: block;  
     scroll-behavior: smooth;
     padding-top: 5px;

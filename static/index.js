@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
         para.style.float = "right";
         para.style.marginBottom = "5px";
         para.style.marginLeft = "200px"
-        para.style.backgroundColor = "violet";
+        para.style.backgroundColor = "#8DBBFF";
         para.style.border = "3px solid black";                
         para.style.borderRadius = "7px";
         para.style.display = "inline" ;             
@@ -36,11 +36,12 @@ document.addEventListener("DOMContentLoaded", ()=> {
         para2.style.position = "relative";
         para2.style.float = "left";
         para2.style.marginBottom = "5px";
-        para2.style.marginRight = "200px"
-        para2.style.backgroundColor = "yellow";
+        para2.style.marginRight = "200px";
+        para2.style.backgroundColor = "#AC9AF3";
         para2.style.border = "3px solid black";                
         para2.style.borderRadius = "7px";
         para2.style.display = "inline" ;
+        
 
 
         const request = new XMLHttpRequest();
@@ -51,12 +52,14 @@ document.addEventListener("DOMContentLoaded", ()=> {
             para.innerHTML = document.querySelector("#text-field").value;
             para2.innerHTML = data.bot;
             document.querySelector(".container > #chat-area").append(para);
-            document.querySelector(".container > #chat-area").append(para2);
+            setTimeout(()=> {document.querySelector(".container > #chat-area").append(para2);
+            chatWindow = document.getElementById('chat-area'); 
+            var xH = chatWindow.scrollHeight; 
+            chatWindow.scrollTo(0, xH);},1000);
+            
 
             // Auto Scroll To Bottom
-        chatWindow = document.getElementById('chat-area'); 
-        var xH = chatWindow.scrollHeight; 
-        chatWindow.scrollTo(0, xH);
+        
         
         // Clearing Out The Text Field
         document.querySelector("#text-field").value = '';
