@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", ()=> {
         const para = document.createElement('div');
         const para2 = document.createElement('div'); 
 
-        // Defining Chat Pargraphs Styling And Behaviour
+        // Defining User Chat Pargraphs Styling And Behaviour
         para.style.textAlign= "center";
         para.style.maxWidth ="200px";
-        para.style.wordBreak = "break-all";                    
+        para.style.overflowWrap = "anywhere";                                        
         para.style.padding = "3px";        
         para.style.position = "relative";
         para.style.float = "right";
@@ -28,10 +28,10 @@ document.addEventListener("DOMContentLoaded", ()=> {
         para.style.borderRadius = "7px";
         para.style.display = "inline" ;             
         
-
+        // Defining Bot Chat Pargraphs Styling And Behaviour
         para2.style.textAlign= "center";
         para2.style.maxWidth ="200px";
-        para2.style.wordBreak = "break-all";                    
+        para.style.overflowWrap = "anywhere";                    
         para2.style.padding = "3px";        
         para2.style.position = "relative";
         para2.style.float = "left";
