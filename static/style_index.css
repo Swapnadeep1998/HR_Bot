@@ -1,10 +1,16 @@
 .banner-area{
-	background-image: url(https://wallpaperplay.com/walls/full/a/e/8/77831.jpg);
-	background-position: center center;
-	-webkit-background-size: cover;
+	margin: 0;
+	padding: 0;
+	background: url(https://images.wallpaperscraft.com/image/city_night_panorama_117682_1280x720.jpg) no-repeat;	
 	background-size: cover;
-	height: 100vh;
+	height: 600px;
+	width: 1300px;
+	position: absolute;
+	top: 0px;
+	
+
 }
+
 body{
 	margin: 0;
 	padding: 0;
@@ -25,9 +31,10 @@ body{
 	color: #fff;
 	font-size: 13px;
 	float: right;
+	border: 1px solid white;
 }
 .menu li:hover{
-	background: yellow;
+	background: white;
 }
 .menu li:hover a{
 	color: #000;
@@ -37,16 +44,17 @@ body{
 	font-family: baloo, sans-serif;
 	color: #FFFAF0;
 	text-transform: uppercase;
-	text-shadow: 2px 2px 4px #fff;
+	
 }
 .logo{
-	text-decoration: none;
+	
 	color: #fff;
 	font-size: 25px;
 	font-family: big john, sans-serif;
-	padding: 20px 0;
-	width: 20%;
-	float: left;
+	text-shadow: 1px 1px 1px white,
+				2px 2px 4px black;
+	text-emphasis: inherit;
+               
 }
 .banner-text{
 	position: absolute;
@@ -57,18 +65,32 @@ body{
 	text-align: center;
 }
 .banner-text h2{
+	color: white;
 	font-family: baloo, sans-serif;
 	margin-right: 0;
-	font-size: 55px;
+	font-size: 70px;
 	font-weight: 700;
-    color: #a51414;
-    text-shadow: 2px 2px 4px #000000;
+    
+    text-shadow: 2px 2px 6px black;
 }
 .banner-text p{
-	font-size: 22px;
+	font-size: 25px;
 	margin: 0;
-	font-family: poppins, sans-serif;
+	font-family: sans-serif;
 	color: #B22222;
+	font-weight: bold;
+	text-shadow: 0 1px 0 #ccc,
+               0 1px 0 #c9c9c9,
+               0 1px 0 #bbb,
+               0 1px 0 #b9b9b9,
+               0 1px 0 #aaa,
+               0 1px 1px rgba(0,0,0,.1),
+               0 0 1px rgba(0,0,0,.1),
+               0 1px 1px rgba(0,0,0,.3),
+               0 1px 1px rgba(0,0,0,.2),
+               0 3px 5px rgba(0,0,0,.25),
+               0 4px 4px rgba(0,0,0,.2),
+               0 12px 12px rgba(0,0,0,.15);
 }
 .banner-text a{
 	text-decoration: none;
@@ -79,14 +101,20 @@ body{
 	margin-top: 5%;
 	font-family: poppins, sans-serif;
 	text-transform: uppercase; 
-	text-shadow: 2px 2px 4px #000000;
+	
+	box-shadow: 1px 1px 2px black;
+	font-size: 20px;
+	font-weight: 3px;
 }
 .banner-text a:hover{
-	border-color: yellow;
-	background: yellow;
+	border-color: white;
+	background: white;
 	transition: .3s;
 	color: #262626; 
+	box-shadow: 4px 4px 4px black;
+	text-shadow: 0px;
 }
+
 
 .box{
 	width: 500px;
@@ -141,3 +169,50 @@ body{
   #interview{
 	  text-decoration: none;
   }
+
+ #About{
+	  position: absolute;
+	  top: 700px;
+	  width: 700px;
+	  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  #image1{
+	  position: absolute;
+	  top: 750px;
+	  left: 900px;  
+  }
+  #image1 img{
+	  width: 300px;
+	  height: 270px;
+	  border-radius: 15px;
+	  
+  }
+
+  #Contacts{
+	  position: absolute;
+	  top: 1250px;
+	  height: 300px;
+  }
+
+  div #swapnadeep{
+	  position: absolute;
+	  left: 1px;
+	  width: 200px;
+	  text-align: center;
+  }
+
+  div #subidita{
+	position: absolute;
+	left: 450px;
+	width: 200px;
+	text-align: center;
+}
+
+div #tirtha{
+	position: absolute;
+	left: 850px;
+	width: 200px;
+	text-align: center;
+
+}

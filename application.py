@@ -76,7 +76,10 @@ def chat():
         store_into_table(session)
         reply = "bye"
         return jsonify({"bot":reply,"user":message})
-    reply = response(str(message))
+    try:
+        reply = response(str(message))
+    except:
+        err_msg = "Sorry Your response/tech-stack combination is not acceptable/understandable for us"
     return jsonify({"bot":reply,"user":message})
 
 

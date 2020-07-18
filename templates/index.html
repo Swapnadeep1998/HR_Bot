@@ -2,19 +2,23 @@
 
 {% block body %}
 <script src="/static/modal.js"></script>
-    <div class='banner-area'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  	
+  <div class='banner-area'>
+		
 		<header class=index-header>
-			<a href="#" class='logo'>ABC Private Ltd.</a>
-
+			<h1 class='logo'>ABC Private Ltd.</h1>
+		
 			<ul class="menu">
-				<li><a href="#">Contact</a></li>
-				<li><a href="#">About</a></li>	
-				<li><a href="{{ url_for('index') }}">Home</a></li>
+				<li><a href="#Contacts">Contact</a></li>
+				<li><a href="#About">About</a></li>					
 			</ul>
+		
 		</header>
 		<div class="banner-text">
 			<h2>HR-bot</h2>
-			<p>Take a step closer to your Dream Job!</p>
+		<p>Take a step closer to your Dream Job!</p>
 			<a id="myBtn" onclick="modal();">Read More</a>
 			
 			<div id="myModal" class="modal">
@@ -31,5 +35,62 @@
 
 			<a href="{{ url_for('login') }}" id="interview">Start The Interview</a>
 		</div>
+		<div class="container">
+		
+			<div id="About">
+			<h1 style="font-weight: bolder;">About The Project</h1>
+			<p>
+				The growing need of machine learning and AI can effectively be applied to the recruitment process to ease the human life and make the process more cost effective, quick and unbiased. As the recruitment process is being perplexed day by day, sometimes it becomes really tough for a company to go through the all the entire resumes manually and shortlist the candidates based on company requirements for personal interviews. Eventually companies sometimes hire agencies to do this, and end up spending a huge amount of time and money. Here the interview chatbots come into play. We are building the HR-BOT to automate the initial screening process by chatting with the candidates online and asking relevant questions so that a company can spend less time going through thousands of resumes and shortlist them faster. It’s not possible for human recruiters to work 24/7 while a chatbot can serve the queries and effectively takes interviews of several candidates at a time without asking for a leave.
+
+            <h3>What is Chatbot? </h3>
+             A chatbot is an intelligent piece of software that is capable of communicating and performing actions similar to a human. Chatbots are used a lot in customer interaction, marketing on social network sites and instantly messaging the client. There are two basic types of chatbot models based on how they are built; Retrieval based and Generative based models.
+			</p>
+		</div>
+		<div id="image1">
+			<img src="https://www.zipwhip.com/wp-content/uploads/2019/03/chatbot-blog-featured.png">
+		</div>
+
+		<div id="Contacts">
+			<h1 style="font-weight: bolder; font-style: 'Times New Roman';">Contact Us</h1>
+			<div id="swapnadeep">
+				<h4 style="font-weight: bolder;">Swapnadeep Sarkar</h4>
+				
+				
+				<a href="https://www.linkedin.com/in/swapnadeepsarkar1998/"  target="_blank">
+					<i class="fa fa-linkedin-square" style="font-size:36px"></i>
+				</a>
+				&nbsp;
+				<a href="https://github.com/Swapnadeep1998" target="_blank">
+					<i class="fa fa-github-square" style="font-size:36px; color:black"></i>
+				</a>
+			</div>
+			<div id="subidita">
+				<h4 style="font-weight: bolder;">Subidita Maity</h4>
+				<a href="https://www.linkedin.com/in/subidita-maity-006452197/"  target="_blank">
+					<i class="fa fa-linkedin-square" style="font-size:36px"></i>
+				</a>
+				&nbsp;
+				<a href="https://github.com/subidita-262/" target="_blank">
+					<i class="fa fa-github-square" style="font-size:36px; color:black"></i>
+				</a>
+
+			</div>
+			<div id="tirtha">
+				<h4 style="font-weight: bolder;">Tirtha Paul Chowdhury</h4>
+				<a href="https://www.linkedin.com/in/tirthapaulchowdhury/" target="_blank">
+					<i class="fa fa-linkedin-square" style="font-size:36px"></i>
+				</a>
+				&nbsp;
+				<a href="https://github.com/Tirtha-PaulChowdhury" target="_blank">
+					<i class="fa fa-github-square" style="font-size:36px; color:black"></i>
+				</a>
+
+
+			</div>
+
+		</div>
+		</div>
+	
 	</div>
 {% endblock %}
+<!-- background-image: url(https://wallpaperplay.com/walls/full/a/e/8/77831.jpg); -->
