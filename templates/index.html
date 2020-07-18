@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<script src="/static/modal.js"></script>
+    <div class='banner-area'>
+		<header class=index-header>
+			<a href="#" class='logo'>ABC Private Ltd.</a>
+
+			<ul class="menu">
+				<li><a href="{{ url_for('index') }}">Home</a></li>
+				<li><a href="#">About</a></li>				
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</header>
+		<div class="banner-text">
+			<h2>HR-bot</h2>
+			<p>Take a step closer to your Dream Job!</p>
+			<a id="myBtn" onclick="modal();">Read More</a>
+			
+			<div id="myModal" class="modal">
+				<section class="close">&times;</section>
+				<br>							 	
+				<div class="read_more">
+				HR-Bot is an AI Chatbot that makes the process of resume screening much easier
+                and shortlist ideal candidates for a job post.
+                Just click on the start interview tab, fill up your details,
+                and answer the questions asked by our bot.
+				</div> 									
+							  
+			  </div>
+
+			<a href="{{ url_for('login') }}">Start The Interview</a>
+		</div>
+	</div>
+{% endblock %}

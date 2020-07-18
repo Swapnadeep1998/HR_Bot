@@ -22,9 +22,11 @@ document.addEventListener("DOMContentLoaded", ()=> {
         para.style.position = "relative";
         para.style.float = "right";
         para.style.marginBottom = "5px";
-        para.style.marginLeft = "200px"
-        para.style.backgroundColor = "#8DBBFF";
-        para.style.border = "3px solid black";                
+        para.style.marginLeft = "200px";
+        para.style.marginRight = "8px";
+        para.style.marginTop = "12px";
+        para.style.backgroundColor = "#007bff";  
+        para.style.color = "#fff";              
         para.style.borderRadius = "7px";
         para.style.display = "inline" ;             
         
@@ -37,8 +39,10 @@ document.addEventListener("DOMContentLoaded", ()=> {
         para2.style.float = "left";
         para2.style.marginBottom = "5px";
         para2.style.marginRight = "200px";
-        para2.style.backgroundColor = "#AC9AF3";
-        para2.style.border = "3px solid black";                
+        para2.style.marginLeft = "8px";
+        para2.style.marginTop = "12px";
+        para2.style.backgroundColor = "#efefef"; 
+        para2.style.color = "#646464";
         para2.style.borderRadius = "7px";
         para2.style.display = "inline" ;
         
@@ -51,7 +55,11 @@ document.addEventListener("DOMContentLoaded", ()=> {
             const data = JSON.parse(request.responseText);
             para.innerHTML = document.querySelector("#text-field").value;
             para2.innerHTML = data.bot;
+            
             document.querySelector(".container > #chat-area").append(para);
+            chatWindow = document.getElementById('chat-area'); 
+            var xH = chatWindow.scrollHeight;
+            chatWindow.scrollTo(0, xH);
             setTimeout(()=> {document.querySelector(".container > #chat-area").append(para2);
             chatWindow = document.getElementById('chat-area'); 
             var xH = chatWindow.scrollHeight; 

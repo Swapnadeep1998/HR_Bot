@@ -56,13 +56,17 @@ def store_into_table(session):
 
 @app.route("/")
 def index():
-    return render_template("user.html")
+    return render_template("index.html")
 
-@app.route("/user", methods=["POST"]) 
-def user():
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
+@app.route("/chatbot", methods=["POST"]) 
+def chatbot():
     session["name"] = request.form.get("name")
     session["email"] = request.form.get("email")
-    return render_template("index_test.html") 
+    return render_template("chatbot.html") 
 
 @app.route("/chat", methods = ["POST"])
 def chat():     
