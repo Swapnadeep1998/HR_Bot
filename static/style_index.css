@@ -84,7 +84,7 @@ body{
 .banner-text a:hover{
 	border-color: yellow;
 	background: yellow;
-	transition: .9s;
+	transition: .3s;
 	color: #262626; 
 }
 
@@ -130,4 +130,14 @@ body{
 	cursor: pointer;
   }
 
-  
+  #myBtn{
+	  text-emphasis-color: white;
+	  color: white;
+	  cursor: pointer;
+  }
+  #myBtn:hover{
+	  color: black;
+  }
+  #interview{
+	  text-decoration: none;
+  }
