@@ -174,7 +174,8 @@ body{
 	  position: absolute;
 	  top: 700px;
 	  width: 700px;
-	  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	  font-family: 'Times New Roman', Times, serif;
+	  font-size: 15px;
   }
 
   #image1{
@@ -189,10 +190,53 @@ body{
 	  
   }
 
+  #docs{
+	position: absolute;
+	top: 1150px;
+	height: 500px;
+	font-family: 'Times New Roman', Times, serif;
+
+  }
+
+  #testcase{
+	text-decoration: none;
+	border: 1px solid rgb(22, 22, 22);
+	padding: 10px 35px;
+	color: #000;
+	display: inline-block;
+	margin-top: 5%;
+	margin-right: 55px;
+	font-family: poppins, sans-serif;
+	text-transform: uppercase; 
+	border-radius: 5px;	
+	box-shadow: 1px 1px 2px black;
+	font-size: 15px;
+	font-weight: 3px;
+  }
+  #testcase:hover{
+  border-color: white;
+	background: white;
+	transition: .3s;
+	color: #262626; 
+	box-shadow: 4px 4px 4px black;
+	text-shadow: 0px;
+  }
+  #testcase:active{
+	  text-decoration: none;
+  }
+
+  #video{
+	  margin-top: 50px;
+	  margin-left: 400px;
+	  border-radius: 5px;
+
+  }
+  
+
   #Contacts{
 	  position: absolute;
-	  top: 1250px;
-	  height: 300px;
+	  top: 1750px;
+	  height: 200px;
   }
 
   div #swapnadeep{
@@ -200,6 +244,8 @@ body{
 	  left: 1px;
 	  width: 200px;
 	  text-align: center;
+	  font-family: 'Times New Roman', Times, serif;
+	  color: rgb(90, 87, 87);
   }
 
   div #subidita{
@@ -207,6 +253,8 @@ body{
 	left: 450px;
 	width: 200px;
 	text-align: center;
+	font-family: 'Times New Roman', Times, serif;
+	color: rgb(90, 87, 87);
 }
 
 div #tirtha{
@@ -214,5 +262,8 @@ div #tirtha{
 	left: 850px;
 	width: 200px;
 	text-align: center;
+	font-family: 'Times New Roman', Times, serif;
+	color: rgb(90, 87, 87);
 
 }
+
