@@ -37,3 +37,18 @@ After setting up the model, we will fit the data to our model, defining the numb
 Ideally we want to generate a response to any sentence the user types in . To do this, during the actual execution of our “HR-BOT” the process to generate a response will look like the following:-
 
 Get some input from the user ➤ Convert it to a bag of words ➤ Get a prediction from our model ➤ Find the most probable class ➤ Pick a response from that class ➤ Show as response.
+
+
+
+
+
+Project has been deployed and live on:
+http://ec2-13-234-38-210.ap-south-1.compute.amazonaws.com:8080/
+
+
+
+
+Done By
+1. Swapnadeep Sarkar
+2. Subidita Maity
+3. Tirtha Paul Chowdhury
