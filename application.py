@@ -95,7 +95,7 @@ def chat():
         mssg = f'It was nice interviewing you {name.split()[0]}.\nYou have applied for the role {session["jobrole"]}.\nYour scores are as follows\n1. Experience_pts: {session["exp_pts"]},\n2. Skill_pts: {session["skill_pts"]},\n3. Project_pts: {session["project_pts"]},\n4. Total_score: {session["total_pts"]}.\nIf our company selects you, you will soon be contacted for further procedures'
         email = session["email"]
         send_email(subject, mssg, email)
-        reply = f"We've sent you an email, letting you know your scores, Thanku {name.split()[0]}, Click on the home button to leave the conversation"
+        reply = f"We've sent you an email, letting you know your scores, Thank you {name.split()[0]}, Click on the home button to leave the conversation"
         return jsonify({"bot":reply,"user":message})
     try:
         reply = response(str(message))
@@ -107,5 +107,4 @@ def chat():
 
 if __name__=="__main__":
     with application.app_context():
-        app.run(debug=True)
-    
+        app.run(host = '0.0.0.0',port=8080)
