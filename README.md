@@ -39,7 +39,9 @@ Ideally we want to generate a response to any sentence the user types in . To do
 Get some input from the user ➤ Convert it to a bag of words ➤ Get a prediction from our model ➤ Find the most probable class ➤ Pick a response from that class ➤ Show as response.
 
 
+Youtube link for demo:
 
+https://youtu.be/ECqabrjyoV4
 
 
 Project has been deployed and live on:
